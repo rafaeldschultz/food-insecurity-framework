@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling", "pandas", "numpy", "deap", "plotly", "matplotlib", "geopandas", "seaborn", "yellowbrick", "libpysal]
+build-backend = "hatchling.build"
+
+[project]
+name = "foodinsecurityframework"
+version = "0.0.1"
+authors = [
+  { name="Rafael Schultz", email="" },
+]
+description = "Framework to help multicriteria decision-making in multidisciplinary environments"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rafaeldschultz/food-insecurity-framework"

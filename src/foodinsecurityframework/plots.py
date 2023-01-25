@@ -34,9 +34,6 @@ import seaborn as sns
 from splot.esda import plot_local_autocorrelation
 from esda import Moran_Local
 
-import user_inputs as user_inputs
-
-
 def scatter_plots(
     dataframe: pd.DataFrame,
     comb_features: list[tuple[str, ...]],
@@ -165,8 +162,7 @@ def scatter_plots(
         path.joinpath('scatter_2d_{}_color_{}.html'.format(
             labels[color_key], color_key)))
     fig.write_image(path.joinpath('scatter_2d_{}_color_{}.png'.format(
-        labels[color_key], color_key)),
-                    scale=user_inputs.fig_scale)
+        labels[color_key], color_key)))
 
   if (fig3d != 0):
     fig3d.show()
@@ -174,8 +170,7 @@ def scatter_plots(
     fig3d.write_html(
         path.joinpath('scatter_3d_{}.html'.format(labels[color_key])))
     fig3d.write_image(path.joinpath('scatter_3d_{}.png'.format(
-        labels[color_key])),
-                      scale=user_inputs.fig_scale)
+        labels[color_key])))
 
 
 def nsga2_stats_plots(fronts: list, path: Path) -> None:
@@ -289,7 +284,7 @@ def nsga2_stats_plots(fronts: list, path: Path) -> None:
   # fig.show()
 
   fig.write_html(path.joinpath('nsga_stats.html'))
-  fig.write_image(path.joinpath('nsga_stats.png'), scale=user_inputs.fig_scale)
+  fig.write_image(path.joinpath('nsga_stats.png'))
 
 
 def pareto_fronts_plot(
@@ -356,8 +351,7 @@ def pareto_fronts_plot(
       path.joinpath('pareto_fronts_{}x{}x{}.html'.format(
           axis[0], axis[1], axis[2])))
   fig.write_image(path.joinpath('pareto_fronts_{}x{}x{}.png'.format(
-      axis[0], axis[1], axis[2])),
-                  scale=user_inputs.fig_scale)
+      axis[0], axis[1], axis[2])))
 
 
 def find_graph_fronts(dataframe: pd.DataFrame,
@@ -463,8 +457,7 @@ def maps_plots(
     fig.update_geos(fitbounds='locations', visible=False)
 
     fig.write_html(path.joinpath('map_{}.html'.format(labels[features[i]])))
-    fig.write_image(path.joinpath('map_{}.png'.format(labels[features[i]])),
-                    scale=user_inputs.fig_scale)
+    fig.write_image(path.joinpath('map_{}.png'.format(labels[features[i]])))
 
 
 def outliers_map_plot(
@@ -513,8 +506,7 @@ def outliers_map_plot(
   fig.update_geos(fitbounds='locations', visible=False)
 
   fig.write_html(path.joinpath('map_outliers.html'))
-  fig.write_image(path.joinpath('map_outliers.png'),
-                  scale=user_inputs.fig_scale)
+  fig.write_image(path.joinpath('map_outliers.png'))
 
 
 def get_matplotlib_colorscale(

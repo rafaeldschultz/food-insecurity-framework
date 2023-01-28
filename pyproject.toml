@@ -7,6 +7,7 @@ name = "foodinsecurityframework"
 authors = [
     {name = "Rafael Schultz", email = "rafaeldschultz@gmail.com"},
 ]
+version = "0.0.1"
 description = "Framework to help multicriteria decision-making in multidisciplinary environments"
 readme = {file = "README.txt", content-type = "text/markdown"}
 requires-python = ">=3.8"
@@ -28,4 +29,6 @@ dependencies = [
     "libpysal",
     "pysal"
 ]
-dynamic = ["version"]
+
+[project.urls]
+source = "https://github.com/rafaeldschultz/food-insecurity-framework"

@@ -9,7 +9,7 @@ authors = [
 ]
 version = "0.0.1"
 description = "Framework to help multicriteria decision-making in multidisciplinary environments"
-readme = {file = "README.txt", content-type = "text/markdown"}
+readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
 classifiers = [
